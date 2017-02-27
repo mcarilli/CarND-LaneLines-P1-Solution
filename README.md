@@ -14,6 +14,7 @@ The goals / steps of this project are the following:
 
 ###1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
+![alt text][./test_images/solidWhiteCurve.jpg]
 My pipeline consisted of the following steps:
 
 1.  Construct a filter that removed pixels that were not close in color to white or yellow.
@@ -32,7 +33,6 @@ My pipeline consisted of the following steps:
 
 8.  Finally, I overlaid the averaged and extrapolated lines on the input image.
 
-![alt text][./test_images/solidWhiteCurve.jpg]
 
 ###2. Identify potential shortcomings with your current pipeline
 
