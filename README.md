@@ -16,10 +16,14 @@ The goals / steps of this project are the following:
 
 My pipeline consisted of the following steps:
 1.  Construct a filter that removed pixels that were not close in color to white or yellow.
+
 2.  Convert the image to grayscale.
+
 3.  Gaussian-blur the grayscale image with a kernel size of 5.
+
 4.  Run Canny edge-detection on the blurred image, with low and high gradient thresholds of 50 and 150 respectively.
-* 5. 
+
+5. 
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
 
