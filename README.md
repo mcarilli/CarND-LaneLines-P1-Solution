@@ -33,7 +33,7 @@ My pipeline consisted of the following steps:
 4.  Run Canny edge-detection on the blurred image, with low and high gradient thresholds of 50 and 150 respectively.
 
 5.  Mask the region of interest on the Canny-edged image.  I did some trial and error to figure out a trapezoidal region of interest that masked out as much background clutter as possible.  This mask works for all the provided images, and both non-challenge videos.  Here's what it looks like applied to a raw image (although in the code, the mask is applied after the Canny stage, rather than to the raw image).
-![alt text](./test_images/solidWhiteCurve_masked.jpg)
+![alt text](./solidWhiteCurve_masked.jpg)
 
 6.  I applied the Hough transform to the masked Canny-edged image.  Because I had restricted the region of interest aggressively to mask background clutter, I was able to get away with generous parameters parameters for the Hough line detection:  distance resolution 2, angular resolution pi/180, a threshold of 30 votes, a long min line length of 100, and a long max line gap of 200.  These generous parameters, in particular the long line gap, enabled striped lines to be counted as part of the same Hough line segment in many cases.
 
