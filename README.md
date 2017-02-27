@@ -12,7 +12,13 @@ The goals / steps of this project are the following:
 
 ### Reflection
 
-### My code is in P1.ipynb.  Sample images with extrapolated lane lines can be found in test_images/output. white.mp4 is the output video for solidWhiteRight.mp4.  yellow.mp4 is the output for solidYellowLeft.mp4.  This repo contains all the input files so once you've cloned the repo, P1.ipynb should be runnable as-is.
+### My code is in P1.ipynb.  
+
+### Sample images with extrapolated lane lines can be found in test_images/output. 
+
+### white.mp4 is the output video for solidWhiteRight.mp4.  yellow.mp4 is the output for solidYellowLeft.mp4.  
+
+### This repo contains all the input files so once you've cloned the repo, P1.ipynb should be runnable as-is.
 
 ###1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
