@@ -1,9 +1,5 @@
 #**Finding Lane Lines on the Road** 
 
-##Writeup Template
-
-###You can use this file as a template for your writeup if you want to submit it as a markdown file. But feel free to use some other method and submit a pdf if you prefer.
-
 ---
 
 **Finding Lane Lines on the Road**
@@ -12,11 +8,6 @@ The goals / steps of this project are the following:
 * Make a pipeline that finds lane lines on the road
 * Reflect on your work in a written report
 
-
-[//]: # (Image References)
-
-[image1]: ./examples/grayscale.jpg "Grayscale"
-
 ---
 
 ### Reflection
@@ -24,10 +15,10 @@ The goals / steps of this project are the following:
 ###1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
 My pipeline consisted of the following steps:
-* 1. Construct a filter that removed pixels that were not close in color to white or yellow.
-* 2. Convert the image to grayscale.
-* 3. Gaussian-blur the grayscale image with a kernel size of 5.
-* 4. Run Canny edge-detection on the blurred image, with low and high gradient thresholds of 50 and 150 respectively.
+1.  Construct a filter that removed pixels that were not close in color to white or yellow.
+2.  Convert the image to grayscale.
+3.  Gaussian-blur the grayscale image with a kernel size of 5.
+4.  Run Canny edge-detection on the blurred image, with low and high gradient thresholds of 50 and 150 respectively.
 * 5. 
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
