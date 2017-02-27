@@ -12,9 +12,10 @@ The goals / steps of this project are the following:
 
 ### Reflection
 
+### My code is in P1.ipynb.  Sample images with extrapolated lane lines can be found in test_images/output. white.mp4 is the output video for solidWhiteRight.mp4.  yellow.mp4 is the output for solidYellowLeft.mp4.  This repo contains all the input files so once you've cloned the repo, P1.ipynb should be runnable as-is.
+
 ###1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
-![alt text](./test_images/solidWhiteCurve.jpg)
 My pipeline consisted of the following steps:
 
 1.  Construct a filter that removed pixels that were not close in color to white or yellow.
@@ -26,6 +27,7 @@ My pipeline consisted of the following steps:
 4.  Run Canny edge-detection on the blurred image, with low and high gradient thresholds of 50 and 150 respectively.
 
 5.  Mask the region of interest on the Canny-edged image.  I did a decent amount of trial and error to figure out a trapezoidal region of interest that masked out as much background clutter as possible.  This mask works for all the provided images, and both non-challenge videos.  Here's what it looks like applied to a raw image (although in the code, the mask is applied after the Canny stage, rather than to the raw image).
+![alt text](./test_images/solidWhiteCurve.jpg)
 
 6.  I applied the Hough transform to the masked Canny-edged image.  Because I had restricted the region of interest aggressively, I was able to get away with generous parameters parameters for the Hough line detection:  distance resolution 2, angular resolution pi/180, a threshold of 30 votes, a long min line length of 100, and a long max line gap of 200.  These generous parameters, in particular the long line gap, enabled striped lines to be counted as part of the same Hough line segment in many cases.
 
