@@ -1,14 +1,6 @@
----
-
-**Finding Lane Lines on the Road**
-
 The goals / steps of this project are the following:
 * Make a pipeline that finds lane lines on the road
 * Reflect on your work in a written report
-
----
-
-### Reflection
 
 ### My code is in P1.ipynb.  
 
@@ -18,7 +10,7 @@ The goals / steps of this project are the following:
 
 ### This repo contains all the input files so once you've cloned the repo, P1.ipynb should be runnable as-is.
 
-###1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
+### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
 My pipeline consisted of the following steps:
 
@@ -40,7 +32,7 @@ My pipeline consisted of the following steps:
 8.  I overlaid the averaged and extrapolated lines on the input image.
 
 
-###2. Identify potential shortcomings with your current pipeline
+### 2. Identify potential shortcomings with your current pipeline
 
 1.  My pipeline relies on a tightly restricted region of interest based on trial and error with the given images.  The advantage of this approach is that it reduces environmental clutter, but the disadvantage is that the car must remain well-centered within the lane.  If the car begins to deviate from the lane, it must correct quickly, or else one lane line will disappear from the masked region and cease to be detected.
 
@@ -48,7 +40,7 @@ My pipeline consisted of the following steps:
 
 3.  My scheme for separating yellow and white lane lines from the background road fails on the variably-lit road present in the challenge problem.  I need to figure out a better way to identify white and yellow pixels. 
 
-###3. Suggest possible improvements to your pipeline
+### 3. Suggest possible improvements to your pipeline
 
 The tight-region-of-interest approach is not terrible, because that region of interest appears fairly consistent across samples, and should remain so as long as the car drives precisely.  It works for all the given input images and first two videos, but I may need to tweak it some more for the challenge video.
 
